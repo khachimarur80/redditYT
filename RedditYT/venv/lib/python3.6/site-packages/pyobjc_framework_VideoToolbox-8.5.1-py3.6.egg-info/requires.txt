@@ -1,0 +1,4 @@
+pyobjc-core>=8.5.1
+pyobjc-framework-Cocoa>=8.5.1
+pyobjc-framework-Quartz>=8.5.1
+pyobjc-framework-CoreMedia>=8.5.1
