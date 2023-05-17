@@ -17,11 +17,11 @@ import json
 import argparse
 
 reddit = praw.Reddit(
-        client_id="oaCHqhq178ldR5d2v684AQ",
-        client_secret="2ley-l26UKlmrf83BZ4OL2YyyeIJ_A",
-        username="Kei80rh",
-        password="Organismo80",
-        user_agent = "YTCreator/1.0 (by /u/Kei80rh)",
+        client_id="",
+        client_secret="",
+        username="",
+        password="",
+        user_agent = "",
     )
 
 def create_yt_short(bg_file, clips_dir, output_dir, chosen_subreddit='askReddit', voice_id=7):
