@@ -16,13 +16,25 @@ from selenium.common.exceptions import NoSuchElementException
 import json
 import argparse
 
+def read_credentials(filename):
+    credentials = {}
+    with open(filename, 'r') as file:
+        for line in file:
+            key, value = line.strip().split('=')
+            credentials[key.strip()] = value.strip()
+    return credentials
+
+credentials_file = 'credentials.txt'
+
+credentials = read_credentials(credentials_file)
+
 reddit = praw.Reddit(
-        client_id="",
-        client_secret="",
-        username="",
-        password="",
-        user_agent = "",
-    )
+    client_id=credentials['client_id'],
+    client_secret=credentials['client_secret'],
+    username=credentials['username'],
+    password=credentials['password'],
+    user_agent=credentials['user_agent']
+)
 
 def create_yt_short(bg_file, clips_dir, output_dir, chosen_subreddit='askReddit', voice_id=7):
 
